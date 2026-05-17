@@ -1,5 +1,9 @@
 # 💰 Gastos CLI
 
+
+## Aplicação Online
+https://thiagoantunes-dev.github.io/gastos-cli/
+
 ## 📌 Descrição
 O Gastos CLI é uma aplicação simples desenvolvida em Python para ajudar pessoas a controlarem seus gastos do dia a dia diretamente pelo terminal.
 
