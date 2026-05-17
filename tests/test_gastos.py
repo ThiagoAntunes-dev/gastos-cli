@@ -1,4 +1,4 @@
-from main import adicionar_gasto, total_gastos, gastos
+from main import adicionar_gasto, total_gastos, gastos, cotacao_dolar
 def setup_function():
     gastos.clear()
 
@@ -21,3 +21,8 @@ def test_total_gastos():
     adicionar_gasto("A", 10)
     adicionar_gasto("B", 20)
     assert total_gastos() == 30
+
+def test_cotacao_dolar():
+    resultado = cotacao_dolar()
+
+    assert "Dólar atual" in resultado or "Erro" in resultado
