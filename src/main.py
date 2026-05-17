@@ -1,3 +1,4 @@
+import requests
 gastos = []
 
 def adicionar_gasto(nome, valor):
@@ -15,6 +16,18 @@ def remover_gasto(nome):
     global gastos
     gastos = [g for g in gastos if g["nome"] != nome]
 
+def cotacao_dolar():
+    url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+
+    resposta = requests.get(url)
+
+    if resposta.status_code == 200:
+        dados = resposta.json()
+        valor = dados["USDBRL"]["bid"]
+        return f"Dólar atual: R$ {valor}"
+
+    return "Erro ao buscar cotação."
+
 
 def menu():
     while True:
@@ -23,6 +36,7 @@ def menu():
         print("3 - Total")
         print("4 - Remover gasto")
         print("0 - Sair")
+        print("5 - Ver cotação do dólar")
 
         opcao = input("Escolha: ")
 
@@ -42,9 +56,25 @@ def menu():
             nome = input("Nome: ")
             remover_gasto(nome)
 
+        elif opcao == "5":
+            print(cotacao_dolar())
+
         elif opcao == "0":
             break
 
 
 if __name__ == "__main__":
     menu()
+
+
+    def cotacao_dolar():
+        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+
+        resposta = requests.get(url)
+
+        if resposta.status_code == 200:
+            dados = resposta.json()
+            valor = dados["USDBRL"]["bid"]
+            return f"Dólar atual: R$ {valor}"
+
+        return "Erro ao buscar cotação."
