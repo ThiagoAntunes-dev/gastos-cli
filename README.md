@@ -45,4 +45,4 @@ O projeto utiliza Supabase (PostgreSQL em nuvem) para persistência dos dados.
 ## Integrantes
 
 - Thiago de Castro Alencar Antunes
-- Nome Completo do Colega
+- Pablo Rafael Caldas Saraiva
