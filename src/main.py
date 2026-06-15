@@ -1,10 +1,26 @@
 import requests
+
+from supabase import create_client
+
 gastos = []
+
+SUPABASE_URL = "https://aolefqnkuzsaqtxhrwva.supabase.co"
+SUPABASE_KEY = "sb_publishable_WYFf1G2D5sR4RxaQJIO-Rg_Ug4coNeN"
+
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def adicionar_gasto(nome, valor):
     if valor < 0:
         raise ValueError("Valor não pode ser negativo")
+
     gastos.append({"nome": nome, "valor": valor})
+
+    supabase.table("gastos").insert(
+        {
+            "descricao": nome,
+            "valor": valor
+        }
+    ).execute()
 
 def listar_gastos():
     return gastos
