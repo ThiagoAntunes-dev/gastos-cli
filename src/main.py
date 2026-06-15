@@ -67,14 +67,3 @@ if __name__ == "__main__":
     menu()
 
 
-    def cotacao_dolar():
-        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
-
-        resposta = requests.get(url)
-
-        if resposta.status_code == 200:
-            dados = resposta.json()
-            valor = dados["USDBRL"]["bid"]
-            return f"Dólar atual: R$ {valor}"
-
-        return "Erro ao buscar cotação."
