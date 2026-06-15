@@ -1,5 +1,8 @@
 # 💰 Gastos CLI
 
+## Participantes 
+Thiago de Castro Alencar Antunes
+Pablo Rafael Caldas Saraiva
 
 ## Aplicação Online
 https://thiagoantunes-dev.github.io/gastos-cli/
