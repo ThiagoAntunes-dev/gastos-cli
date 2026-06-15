@@ -49,3 +49,23 @@ O projeto utiliza Supabase (PostgreSQL em nuvem) para persistência dos dados.
 
 - Thiago de Castro Alencar Antunes
 - Pablo Rafael Caldas Saraiva
+
+## Como executar
+
+python src/main.py
+
+## Como executar os testes
+
+pytest
+
+## Como executar o lint
+
+ruff check .
+
+## Versão
+
+1.0.0
+
+## Repositório
+
+https://github.com/ThiagoAntunes-dev/gastos-cli
