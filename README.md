@@ -37,3 +37,12 @@ Esta aplicação permite registrar, listar, remover e calcular gastos de forma s
 git clone https://github.com/ThiagoAntunes-dev/gastos-cli.git
 cd gastos-cli
 pip install -r requirements.txt
+
+## Banco de Dados
+
+O projeto utiliza Supabase (PostgreSQL em nuvem) para persistência dos dados.
+
+## Integrantes
+
+- Thiago de Castro Alencar Antunes
+- Nome Completo do Colega
